@@ -218,19 +218,19 @@ var loadRefuge = function(ll, funcnext) {
 		"prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n" +
 		"prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>\n" +
 		"prefix jrrk: <http://purl.org/jrrk#>\n" +
-		"prefix dcterm: <http://purl.org/dc/terms/>\n" +
+		"prefix dcterms: <http://purl.org/dc/terms/>\n" +
 		"prefix odp: <http://odp.jig.jp/odp/1.0#>\n" +
 			//		"select ?s ?name ?nameen ?lat ?lng ?classified ?graph ?address ?incharge ?diameter {\n" + 
-			"select ?s ?name ?nameen ?lat ?lng ?routename ?graph {\n" + 
+			"select ?s ?name ?nameen ?lat ?lng ?route ?routename ?routeid ?graph {\n" + 
 			"graph ?graph {\n" + 
 				"?s rdf:type <" + TYPE + ">;\n" +
 				"rdfs:label ?name;\n" +
 //				"odp:classified ?classified;\n" + 
-//				"odp:hasRoute ?route;\n" + 
+				"odp:hasRoute ?route;\n" + 
 				"geo:lat ?lat;\n" +
 				"geo:long ?lng.\n" +
-//				"?route rdfs:label ?name;\n" + 
-//					"dcterms:identifier ?routeid.\n" +
+				"?route rdfs:label ?routename;\n" + 
+					"dcterms:identifier ?routeid.\n" +
 			"optional { ?s rdfs:label ?nameen. filter(lang(?nameen) = 'en') }\n" +
 //				"optional { ?s jrrk:departmentInCharge ?incharge. }\n" + 
 //				"optional { ?s jrrk:diameter ?diameter. }\n" + 
@@ -346,6 +346,7 @@ var getContent = function(data) {
 	s.push("<div id='data'>");
 	
 //	s.push("<div>" + trans(icons[data.type].name) + "</div>");
+	s.push("<div id='title'>" + data.routename + " / " + data.routeid + "</div>");
 	s.push("<div id='title'>" + getName(data) + "</div>");
 	if (data.coverage)
 		s.push("使用可能エリア: " + data.coverage + "<br>");
