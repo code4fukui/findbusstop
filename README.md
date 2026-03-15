@@ -1,4 +1,7 @@
 # findbusstop
+
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 Find bus stops with 5-star open data.
 
 ## Features
