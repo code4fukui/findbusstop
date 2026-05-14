@@ -5,7 +5,7 @@
 A web app to find nearby bus stops using 5-star open data and Google Maps.
 
 ## Demo
-https://codeforfukui.github.io/findbusstop/
+~~https://codeforfukui.github.io/findbusstop/~~ *(unavailable)*
 
 ## Features
 - Finds nearby bus stops using your device's location.

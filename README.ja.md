@@ -3,7 +3,7 @@
 5つ星オープンデータとGoogleマップを利用して、近くのバス停を検索するウェブアプリです。
 
 ## デモ
-https://codeforfukui.github.io/findbusstop/
+~~https://codeforfukui.github.io/findbusstop/~~ *(unavailable)*
 
 ## 機能
 - デバイスの位置情報を使用して近くのバス停を検索します。
